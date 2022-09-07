@@ -1,0 +1,1 @@
+{"name":"Local: Haffman","url":"/Users/sudo/Desktop/Courses/数据结构/exercise/Haffman.cpp","tests":[{"id":1636441023024,"input":"8\n5 29 7 8 14 23 3 11","output":"0110\n10\n1110\n1111\n110\n00\n0111\n010"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/sudo/Desktop/Courses/数据结构/exercise/Haffman.cpp","group":"local","local":true}
