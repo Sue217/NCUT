@@ -1,169 +1,126 @@
-<div class="cover" style="page-break-after:always;font-family:方正公文仿宋;width:100%;height:100%;border:none;margin: 0 auto;text-align:center;">
-    <div style="width:60%;margin: 0 auto;height:0;padding-bottom:10%;">
-        </br>
-        <img src="/Users/sudo/Pictures/school/school_title.jpeg" alt="school_title"/>
-    </div>
-    </br></br></br></br>
-    <div style="width:60%;margin: 0 auto;height:0;padding-bottom:40%;">
-        <img src="/Users/sudo/Pictures/school/ncut_icon.png" alt="ncut_icon"/>
-	</div>
-    </br></br></br></br></br></br></br>
-    <span style="font-family:华文黑体Bold;text-align:center;font-size:20pt;margin: 10pt auto;line-height:30pt;">硬件课程设计报告</span>
-    <p style="text-align:center;font-size:12pt;margin: 0 auto">（2021-2022学年）</p>
-    </br>
-    </br>
-    <table style="border:none;text-align:center;width:72%;font-family:仿宋;font-size:14px; margin: 0 auto;">
-    <tbody style="font-family:方正公文仿宋;font-size:12pt;">
-    	<tr style="font-weight:normal;"> 
-    		<td style="width:20%;text-align:right;">姓　　名</td>
-    		<td style="width:2%">：</td> 
-    		<td style="width:40%;font-weight:normal;border-bottom: 1px solid;text-align:center;font-family:华文仿宋">苏靖博</td>     </tr>
-    	<tr style="font-weight:normal;"> 
-    		<td style="width:20%;text-align:right;">学　　号</td>
-    		<td style="width:2%">：</td> 
-    		<td style="width:40%;font-weight:normal;border-bottom: 1px solid;text-align:center;font-family:华文仿宋">20105050110</td>     </tr>
-    	<tr style="font-weight:normal;"> 
-    		<td style="width:20%;text-align:right;">班　　级</td>
-    		<td style="width:2%">：</td> 
-    		<td style="width:40%;font-weight:normal;border-bottom: 1px solid;text-align:center;font-family:华文仿宋">计实验20</td>     </tr>
-    	<tr style="font-weight:normal;"> 
-    		<td style="width:20%;text-align:right;">指导教师</td>
-    		<td style="width:2%">：</td> 
-    		<td style="width:40%;font-weight:normal;border-bottom: 1px solid;text-align:center;font-family:华文仿宋">李 阳</td>     </tr>
-    	<tr style="font-weight:normal;"> 
-    		<td style="width:20%;text-align:right;">上课时间</td>
-    		<td style="width:2%">：</td> 
-    		<td style="width:40%;font-weight:normal;border-bottom: 1px solid;text-align:center;font-family:华文仿宋"> Jul - Aug,	2022</td>     </tr>
-    	<tr style="font-weight:normal;"> 
-    		<td style="width:20%;text-align:right;">日　　期</td>
-    		<td style="width:2%">：</td> 
-    		<td style="width:40%;font-weight:normal;border-bottom: 1px solid;text-align:center;font-family:华文仿宋"> 2022年	9月	日</td>     </tr>
-    </tbody>              
-    </table>
-</div>
-<div style="page-break-after: always;"></div>
-
-<div style="page-break-after: always;"></div>
+![ncut_icon](https://user-images.githubusercontent.com/73683961/188805020-e33c1ee0-5663-41d6-853d-6014503442b7.png)
 
 # 目录
 
 
 
-## 在七段数码管上显示自己的最后三位学号数字
+## 1 在七段数码管上显示自己的最后三位学号数字
 
-### 实验原理
+### 1.1 实验原理
 
-### 程序功能流程图
+### 1.2 程序功能流程图
 
-### 设计及内部结构
+### 1.3 设计及内部结构
 
-### VHDL源代码及解释
+### 1.4 VHDL源代码及解释
 
-### 仿真结果展示
+### 1.5 仿真结果展示
 
-### FPGA实验截图
+### 1.6 FPGA实验截图
 
-### 问题描述及解决方案
+### 1.7 问题描述及解决方案
 
 
 
-## 在点阵上显示自己的名字
+## 2 在点阵上显示自己的名字
 
-### 实验原理
+### 2.1 实验原理
 
-### 程序功能流程图
+### 2.2 程序功能流程图
 
-### 设计及内部结构
+### 2.3 设计及内部结构
 
-### VHDL源代码及解释
+### 2.4 VHDL源代码及解释
 
-### 仿真结果展示
+### 2.5 仿真结果展示
 
-### FPGA实验截图
+### 2.6 FPGA实验截图
 
-### 问题描述及解决方案
+### 2.7 问题描述及解决方案
+
+
+
+## 3 封装/调用自己的IP Core
+
+### 3.1 实验原理
+
+### 3.2 程序功能流程图
+
+### 3.3 设计及内部结构
+
+### 3.4 VHDL源代码及解释
+
+### 3.5 仿真结果展示
+
+### 3.6 FPGA实验截图
+
+### 3.7 问题描述及解决方案
+
+
+
+## 4 序列检测器
+
+### 4.1 实验原理
+
+### 4.2 程序功能流程图
+
+### 4.3 设计及内部结构
+
+### 4.4 VHDL源代码及解释
+
+### 4.5 仿真结果展示
+
+### 4.6 FPGA实验截图
+
+### 4.7 问题描述及解决方案
+
+
+## 5 CPU实验报告
+
+### 5.1 实验原理
+
+### 5.2 程序功能流程图
+
+### 5.3 设计及内部结构
+
+### 5.4 VHDL源代码及解释
+
+### 5.5 仿真结果展示
+
+### 5.6 FPGA实验截图
+
+### 5.7 问题描述及解决方案
+
 
 <div style="page-break-after: always;"></div>
 
-## 封装/调用自己的IP Core
-
-### 实验原理
-
-### 程序功能流程图
-
-### 设计及内部结构
-
-### VHDL源代码及解释
-
-### 仿真结果展示
-
-### FPGA实验截图
-
-### 问题描述及解决方案
-
-
-
-## 序列检测器
-
-### 实验原理
-
-### 程序功能流程图
-
-### 设计及内部结构
-
-### VHDL源代码及解释
-
-### 仿真结果展示
-
-### FPGA实验截图
-
-### 问题描述及解决方案
-
-<div style="page-break-after: always;"></div>
-
-## CPU实验报告
-
-### 实验原理
-
-### 程序功能流程图
-
-### 设计及内部结构
-
-### VHDL源代码及解释
-
-### 仿真结果展示
-
-### FPGA实验截图
-
-### 问题描述及解决方案
-
-<div style="page-break-after: always;"></div>
 
 # 第一部分 实验报告
 
 
 
-## 在七段数码管上显示自己的最后三位学号数字
+## 1 在七段数码管上显示自己的最后三位学号数字
 
-### 实验原理
+### 1.1 实验原理
 
 七段数码管是电子开发过程中常用的输出显示设备，其显示原理图类似于：
 
 ```shell
-		  0
-		 ____
+          0
+	 ____
     5   |    |   1
          ____  6
     4   |    |   2
          ____
-          3			* h
+          3	     * dp
 ```
 
 由a-f共7位数码管输出接收到的输入控制信号的图像，h为en即是否进行图像显示的控制接口。数码管和接口仅有0/1（即low/high电平）两种模式，由于七段数码管公共端连接到GND（共阴极），当数码管当中某一段被输入低电平，则这一段被点亮。
 
-![7seg_TF](/Users/sudo/Desktop/Courses/NCUT/HardWare/figure/7seg_TF.svg)
+![7seg_TF](https://user-images.githubusercontent.com/73683961/188805379-edc99e4e-b80d-473a-969b-c8f8384e78c5.svg)
 
-### 程序功能流程图
+
+### 1.2 程序功能流程图
 
 ```mermaid
 graph LR
@@ -176,13 +133,11 @@ Display_second_bit ---> End
 Display_third_bit ---> End
 ```
 
-### 设计及内部结构
+### 1.3 设计及内部结构
 
-![image-20220902135612739](/Users/sudo/Library/Application Support/typora-user-images/image-20220902135612739.png)
+<img width="783" alt="schematic" src="https://user-images.githubusercontent.com/73683961/188805441-4a9f60fe-ded3-4054-8a3c-9e8f2e4876a9.png">
 
-![schematic](/Users/sudo/Desktop/Courses/NCUT/Hardware/code16+4/assignment_1/schematic.png)
-
-### VHDL源代码及解释
+### 1.4 VHDL源代码及解释
 
 > code.v
 
@@ -252,17 +207,17 @@ always #10 clk = ~clk;
 endmodule
 ```
 
-### 仿真结果展示
+### 1.5 仿真结果展示
 
-<img src="/Users/sudo/Desktop/Courses/NCUT/Hardware/code16+4/assignment_1/sim.png" alt="sim" style="zoom:30%;" />
+<img width="819" alt="sim" src="https://user-images.githubusercontent.com/73683961/188805515-e7e5367d-0b48-4a9a-ba8e-99d498380753.png">
 
-### FPGA实验截图
+### 1.6 FPGA实验截图
 
-<img src="/Users/sudo/Desktop/Courses/NCUT/Hardware/code16+4/assignment_1/ID.JPG" alt="ID" style="zoom:12%;" />
+<img width="819" alt="sim" src="https://user-images.githubusercontent.com/73683961/188805554-5474a4c1-05a5-47f7-bbce-83d7a4e85f5e.png">
 
-### 问题描述及解决方案
+### 1.7 问题描述及解决方案
 
-起初位数顺序弄混，导致输出结果出现混乱，找到上述数码管排列顺序资料后进行修改，即亮/灭的顺序为$C_6, C_5, ..., C_0$；编写程序时忘记低电平显示，高电平不显示，也导致结果出现混乱，最终和上述问题一起得到纠正和修改，最终通过测试✅；
+起初位数顺序弄混，导致输出结果出现混乱，找到上述数码管排列顺序资料后进行修改，即亮/灭的顺序为 $C_6, C_5, ..., C_0$ ；编写程序时忘记低电平显示，高电平不显示，也导致结果出现混乱，最终和上述问题一起得到纠正和修改，最终通过测试✅；
 
 实验箱中的位数对应有错位，因此在设计时，想输出的数据需要进行相应顺序的调换，例如本人学号末尾三位数为 `110 `，在设计时应该设计为 `101` ；
 
@@ -301,18 +256,15 @@ int main() {
 ```
 
 
+## 2 在点阵上显示自己的名字
 
-<div style="page-break-after: always;"></div>
+### 2.1 实验原理
 
-## 在点阵上显示自己的名字
-
-### 实验原理
-
-$16\times 16$ 扫描LED点阵工作原理与7段数码管相似，由 $16\times 16=256$ 个LED通过排列组合而成，俗称 $16\times 16$ 点阵。单个LED的电路：![image-20220902153133240](/Users/sudo/Library/Application Support/typora-user-images/image-20220902153133240.png)对于单个LED电路当 $R_n\larr High$ 同时 $C_n \larr Low$ 电路形成loop，LED点亮。每一行所有LED $R_n$ 端并联，每一列所有LED $C_n$ 端并联。通过给 $R_n$ 端高电平，这时只要某个 $C_n$ 端给出低电平，对应LED被点亮。
+$16\times 16$ 扫描LED点阵工作原理与7段数码管相似，由 $16\times 16=256$ 个LED通过排列组合而成，俗称 $16\times 16$ 点阵。对于单个LED电路当 $R_n <- High$ 同时 $C_n <- Low$ 电路形成loop，LED点亮。每一行所有LED $R_n$ 端并联，每一列所有LED $C_n$ 端并联。通过给 $R_n$ 端高电平，这时只要某个 $C_n$ 端给出低电平，对应LED被点亮。
 
 显示符号/汉字：通过汉字生成器生成姓名对应的点阵图，后按照其生成的排布顺序，输入在程序中模拟  $16\times 16$ 点阵。按照内部模拟的时钟信号逐行刷新，切换输入字；显示完整的字形的原理是利用人眼的视觉残留。
 
-### 程序功能流程图
+### 2.2 程序功能流程图
 
 ```mermaid
 graph LR
@@ -325,24 +277,11 @@ Display_second_word ---> End
 Display_third_word ---> End
 ```
 
-### 设计及内部结构
+### 2.3 设计及内部结构
 
-<div style="display: flex">
-  <div style="float: left, width: 33.33%, padding: 10px">
-    <img src="/Users/sudo/Desktop/Courses/NCUT/Hardware/figure/exe_su.png" alt="Su" style="width:100%">
-  </div>
-  <div style="float: left, width: 33.33%, padding: 10px">
-    <img src="/Users/sudo/Desktop/Courses/NCUT/Hardware/figure/exe_jing.png" alt="Jing" style="width:100%">
-  </div>
-  <div style="float: left, width: 33.33%, padding: 10px">
-    <img src="/Users/sudo/Desktop/Courses/NCUT/Hardware/figure/exe_bo.png" alt="Bo" style="width:100%">
-  </div>
-</div>
-<img src="/Users/sudo/Library/Application Support/typora-user-images/image-20220902154118399.png" alt="image-20220902154118399" style="zoom:60%;" />
+<img width="829" alt="schematic" src="https://user-images.githubusercontent.com/73683961/188806039-3be37f5e-6d40-4d70-8104-7b8d6388f9ac.png">
 
-![schematic](/Users/sudo/Desktop/Courses/NCUT/Hardware/code16+4/assignment_2/schematic.png)
-
-### VHDL源代码及解释
+### 2.4 VHDL源代码及解释
 
 > code.v
 
@@ -473,44 +412,17 @@ always #0.1 clk=~clk;
 endmodule
 ```
 
-### 仿真结果展示
+### 2.5 仿真结果展示
 
-![name](/Users/sudo/Desktop/Courses/NCUT/HardWare/code16+4/assignment_2/name.png)
+![name](https://user-images.githubusercontent.com/73683961/188806095-01108b19-d797-45e6-930a-6800564ff5c8.png)
 
-### FPGA实验截图
+### 2.6 FPGA实验截图
 
-<div style="display: flex">
-  <div style="float: left, width: 33.33%, padding: 10px">
-    <img src="/Users/sudo/Desktop/Courses/NCUT/Hardware/figure/final_su.JPG" alt="Su" style="width:100%">
-  </div>
-  <div style="float: left, width: 33.33%, padding: 10px">
-    <img src="/Users/sudo/Desktop/Courses/NCUT/Hardware/figure/final_jing.JPG" alt="Jing" style="width:100%">
-  </div>
-  <div style="float: left, width: 33.33%, padding: 10px">
-    <img src="/Users/sudo/Desktop/Courses/NCUT/Hardware/figure/final_bo.JPG" alt="Bo" style="width:100%">
-  </div>
-</div>
-
-
-### 问题描述及解决方案
+### 2.7 问题描述及解决方案
 
 由于选择的是行刷新方式，导致名字汉字横在屏幕上输出，但结果是正确的，无伤大雅；
 
-如果实验箱上的频率选择不合适，会导致拍照不完整/录像时明显看出刷新迹象，如图：
-
-<div style="display: flex">
-  <div style="float: left, width: 33.33%, padding: 2px">
-    <img src="/Users/sudo/Desktop/Courses/NCUT/Hardware/figure/half_su.JPG" alt="Su" style="width:100%">
-  </div>
-  <div style="float: left, width: 33.33%, padding: 2px">
-    <img src="/Users/sudo/Desktop/Courses/NCUT/Hardware/figure/half_jing.JPG" alt="Jing" style="width:100%">
-  </div>
-  <div style="float: left, width: 33.33%, padding: 2px">
-    <img src="/Users/sudo/Desktop/Courses/NCUT/Hardware/figure/half_bo.JPG" alt="Bo" style="width:100%">
-  </div>
-</div>
-
-可以通过调节实验箱频率以获得最佳拍照频率完成拍照✅；
+如果实验箱上的频率选择不合适，会导致拍照不完整/录像时明显看出刷新迹象，可以通过调节实验箱频率以获得最佳拍照频率完成拍照✅；
 
 初次设计时按照汉字生成器生成的点阵排布输出的名字是镜像的，不是很清楚原因不过写了一段程序将字符串特定部分进行reverse就成功地正确显示了✅;
 
@@ -552,17 +464,16 @@ int main() {
 }
 ```
 
-<div style="page-break-after: always;"></div>
 
-## 封装/调用自己的IP Core
+## 3 封装/调用自己的IP Core
 
-### 实验原理
+### 3.1 实验原理
 
 - 实验要求：调用自编写并封装的两位数二进制加法器的IP核，生成多位数的加法器 
 
 首先封装二进制加法器IP Core，我使用了前16道题中的二进制加法器，将其封装后，利用 **Vivado** 中 **Wrapper** 模块进行手动按照相应扩展逻辑，将四个相同2-bit二进制加法器IP Core连接成一个8-bit（多位）二进制加法器，最终通过测试。
 
-### 程序功能流程图
+### 3.2 程序功能流程图
 
 ```mermaid
 graph LR
@@ -571,13 +482,14 @@ graph LR
 管脚绑定 ---> 开关输入/LED显示结果
 ```
 
-### 设计及内部结构
+### 3.3 设计及内部结构
 
-<img src="/Users/sudo/Desktop/Courses/NCUT/Hardware/code16+4/assignment_3/GUI.png" alt="GUI" style="zoom:50%;" />
+<img width="429" alt="GUI" src="https://user-images.githubusercontent.com/73683961/188806688-519d8bdd-c568-473b-aa60-9d751f934846.png">
 
-![schematic](/Users/sudo/Desktop/Courses/NCUT/Hardware/code16+4/assignment_3/schematic.png)
+<img width="782" alt="schematic" src="https://user-images.githubusercontent.com/73683961/188806706-5b94a38e-9d9e-41d8-b940-0df5729533e6.png">
 
-### VHDL源代码及解释
+
+### 3.4 VHDL源代码及解释
 
 > code.v
 
@@ -671,31 +583,26 @@ design_1_wrapper adder(
 endmodule
 ```
 
-### 仿真结果展示
+### 3.5 仿真结果展示
 
-![sim](/Users/sudo/Desktop/Courses/NCUT/Hardware/code16+4/assignment_3/sim.png)
+<img width="953" alt="sim" src="https://user-images.githubusercontent.com/73683961/188806762-6990297e-77f5-491f-af10-72e3b3d1ef26.png">
 
-### FPGA实验截图
 
-<img src="/Users/sudo/Desktop/Courses/NCUT/Hardware/figure/fig_0.jpg" alt="fig_0" style="zoom:22%;" />
+### 3.6 FPGA实验截图
 
-<img src="/Users/sudo/Desktop/Courses/NCUT/Hardware/figure/fig_1.jpg" alt="fig_1" style="zoom:22%;" />
+![fig_0](https://user-images.githubusercontent.com/73683961/188806807-397d3955-876e-4dfc-832a-be1109ce21ff.jpg)
+![fig_1](https://user-images.githubusercontent.com/73683961/188806821-cf348f2e-f6f6-4524-8c42-1e20e3dae88a.jpg)
+![fig_2](https://user-images.githubusercontent.com/73683961/188806829-d430765e-a4a3-4367-83b8-16d17b23c299.jpg)
+![fig_3](https://user-images.githubusercontent.com/73683961/188806835-96a3f957-162b-45a1-b716-64c124df2c9b.jpg)
+![fig_4](https://user-images.githubusercontent.com/73683961/188806840-6bdb238c-0e5d-4605-82c2-3ab8033341b4.jpg)
 
-<img src="/Users/sudo/Desktop/Courses/NCUT/Hardware/figure/fig_2.jpg" alt="fig_2" style="zoom:22%;" />
-
-<img src="/Users/sudo/Desktop/Courses/NCUT/Hardware/figure/fig_3.jpg" alt="fig_3" style="zoom:22%;" />
-
-<img src="/Users/sudo/Desktop/Courses/NCUT/Hardware/figure/fig_4.jpg" alt="fig_4" style="zoom:22%;" />
-
-### 问题描述及解决方案
+### 3.7 问题描述及解决方案
 
 通过查阅资料学习到了IP Core的封装与调用以及Wrapper的使用。看到能通过画逻辑电路图使软件自动生成代码感觉到非常神奇🤗。
 
-<div style="page-break-after: always;"></div>
+## 4 序列检测器
 
-## 序列检测器
-
-### 实验原理
+### 4.1 实验原理
 
 - **Why Finite State Machine?**
     1. 有限状态机克服了纯硬件数字系统顺序方式控制不灵活的缺点
@@ -705,7 +612,7 @@ endmodule
     5. 基于有限状态机技术设计的控制器其工作速度大大优于CPU
     6. 状态机是一类很重要的时序电路，相当于一个控制器，它将一项功能的完成分解为若干步，每一步对应于 *二进制* 的一个状态，通过预先设计的顺序在各状态之间进行转换，*状态转换* 的过程就是实现逻辑功能的过程
 
-### 程序功能流程图
+### 4.2 程序功能流程图
 
 ```mermaid
 graph LR
@@ -722,7 +629,7 @@ Counter++ --position--> LED_ON
 LED_ON --END?--> End
 ```
 
-### 设计及内部结构
+### 4.3 设计及内部结构
 
 > 状态机(State Machine) 组成以及状态的转换是本实验的核心内容，将结果在七段数码管上显示是实验的辅助，锦上添花。
 
@@ -737,9 +644,10 @@ Input ---> #0
 #0 --1--> #0
 ```
 
-![schematic](/Users/sudo/Desktop/Courses/NCUT/Hardware/code16+4/assignment_4/schematic.png)
+<img width="687" alt="schematic" src="https://user-images.githubusercontent.com/73683961/188807064-35acdfd9-6870-490c-a98f-0892c43f3034.png">
 
-### VHDL源代码及解释
+
+### 4.4 VHDL源代码及解释
 
 > code.v
 
@@ -877,39 +785,39 @@ end
 endmodule
 ```
 
-### 仿真结果展示
+### 4.5 仿真结果展示
 
-![sim](/Users/sudo/Desktop/Courses/NCUT/Hardware/code16+4/assignment_4/sim.png)
+<img width="821" alt="sim" src="https://user-images.githubusercontent.com/73683961/188807223-b931b412-a575-4346-85ea-1e9837327f14.png">
 
-### FPGA实验截图
 
-![serial](/Users/sudo/Desktop/Courses/NCUT/Hardware/code16+4/assignment_4/serial.jpg)
+### 4.6 FPGA实验截图
 
-### 问题描述及解决方案
+![serial](https://user-images.githubusercontent.com/73683961/188807268-08511ab5-a6d7-4b95-b4e0-8c9f9bb89f66.jpg)
+
+
+### 4.7 问题描述及解决方案
 
 起初未加七段数码管作为输出，而是直接返回寄存器中值；也未设计Input Switch，无法在实验时进行动态输入，实验只能进行固定的、静态的数据测试，经过线上验机李阳老师的建议和指导，后期经过查询资料对其进行了改进。改进后的批注如上图所示。
 
-<div style="page-break-after: always;"></div>
 
-## CPU实验报告
+## 5 CPU实验报告
 
-### 实验原理
+### 5.1 实验原理
 
-![ins_1](/Users/sudo/Desktop/Courses/NCUT/Hardware/figure/ins_1.png)
+<img width="1052" alt="ins_1" src="https://user-images.githubusercontent.com/73683961/188807541-9578417d-d9b6-4a00-9cf1-ff57270d7e39.png">
+<img width="1052" alt="ins_2" src="https://user-images.githubusercontent.com/73683961/188807556-34b90330-4b29-4228-b11b-a6b1c713074c.png">
+<img width="1052" alt="ins_3" src="https://user-images.githubusercontent.com/73683961/188807559-df8798fe-c96c-47b1-a187-d96a6c31464f.png">
 
-![ins_2](/Users/sudo/Desktop/Courses/NCUT/Hardware/figure/ins_2.png)
 
-![ins_3](/Users/sudo/Desktop/Courses/NCUT/Hardware/figure/ins_3.png)
-
-#### 对CPU的操作码进行详细的描述
+#### 5.1.1 对CPU的操作码进行详细的描述
 
 > 操作码指计算机程序中所规定的要执行操作的那一部分指令或字段(通常用代码表示)，其实就是指令序列号，用来告诉CPU需要执行哪一条指令。
 
-#### 对CPU的功能码进行详细的描述
+#### 5.1.2 对CPU的功能码进行详细的描述
 
 > 功能码用于标明一个Modbus信息帧的用途，如功能码01为读取线圈状态，02为读取输入状态等。当主设备向从设备发送信息时，功能码将告诉从设备需要执行哪些行为。例如，去读取输入的开关状态、读一组寄存器的数据内容等。当从设备响应时，使用功能码用于指示是正常响应(无误)还是有某种错误发生(称作异议回应)。正常应答时，主机发送的功能码等于从机应答的功能码.
 
-#### 对CPU的指令及操作码进行分类
+#### 5.1.3 对CPU的指令及操作码进行分类
 
 1. $R-type$ Instruction
 
@@ -1144,7 +1052,7 @@ endmodule
 
     
 
-### 程序功能流程图
+### 5.2 程序功能流程图
 
 ```mermaid
 graph LR
@@ -1155,11 +1063,12 @@ Execute ---> Write_Back
 Write_Back ---> Next/PC
 ```
 
-### 设计及内部结构
+### 5.3 设计及内部结构
 
-<img src="/Users/sudo/Desktop/Courses/NCUT/Hardware/figure/CPU.jpg" alt="CPU" style="zoom:100%;" />
+![CPU](https://user-images.githubusercontent.com/73683961/188808507-685e8c21-e8d1-4e0c-aa6f-15577d3dd5a1.jpg)
 
-### VHDL源代码及解释
+
+### 5.4 VHDL源代码及解释
 
 #### alu.v
 
@@ -2027,15 +1936,17 @@ for i in range(16384):
   print(res)
 ```
 
-### 仿真结果展示
+### 5.5 仿真结果展示
 
-![CPU_Sim](/Users/sudo/Desktop/Courses/NCUT/Hardware/figure/CPU_Sim.png)
+<img width="1177" alt="CPU_Sim" src="https://user-images.githubusercontent.com/73683961/188807662-8d9108b3-3bf6-4b47-aba1-5a36d556d971.png">
 
-### FPGA实验截图
 
-![result](/Users/sudo/Desktop/Courses/NCUT/Hardware/figure/result.JPG)
+### 5.6 FPGA实验截图
 
-### 问题描述及解决方案
+![result](https://user-images.githubusercontent.com/73683961/188807680-d94cb918-c047-4ee5-b526-01d8a57c4fff.JPG)
+
+
+### 5.7 问题描述及解决方案
 
 起初对CPU整体结构没有很好的把握，浪费了很多时间在系统设计上，最后决定对上学期学习的计算机组成原理一书中的CPU模型进行分析及改进；回到学校后，和同学共同探讨，对31条指令按类别进行了细致的分类，最后可以在case中对不同的指令进行归类和实现。后期模拟计算机内存随机生成了一份内存映射，还根据指令规律生成了一份测试指令来模拟实现 $1 + 2 + \cdots + 10$ 操作（[details](https://gitee.com/ShangaNana/hardware-course-design-ncut/issues/I5OG99))（通过 `$readmemh("<path>", mem);` 指令读入指令/内存）。还与同学交换了test sample进行多组测试📄。
 
