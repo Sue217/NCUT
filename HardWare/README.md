@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 <center><img src="../figure/school_title.jpeg" alt="school_title" style="zoom:80%;" /></center>
+=======
+<<<<<<< HEAD
+<center><img src="/Users/sudo/Pictures/school/school_title.jpeg" alt="school_title" style="zoom:80%;" /></center>
+>>>>>>> b4ee204564d72f6626b19dcd4125ccc5a5914dc1
 
 
 
@@ -10,6 +15,17 @@
 <center><div style='height:2mm;'></div><div style="font-size:15pt;">Author: Jingbo Su</div></center>
 <center><span style="font-size:12pt;line-height:9mm"><i>North China University of Technology</i></span>
 <div style="page-break-after: always;"></div>
+<<<<<<< HEAD
+=======
+
+
+=======
+<p align="center">
+  <img src="../figure/ncut_icon.png" />
+</p>
+>>>>>>> 324267d8b7ca41e7683c2c9640193a17f1ae0cd7
+
+>>>>>>> b4ee204564d72f6626b19dcd4125ccc5a5914dc1
 # 目录
 
 
