@@ -1,8 +1,8 @@
-<center><img src="/Users/sudo/Pictures/school/school_title.jpeg" alt="school_title" style="zoom:80%;" /></center>
+<center><img src="../figure/school_title.jpeg" alt="school_title" style="zoom:80%;" /></center>
 
 
 
-<center><img src="/Users/sudo/Pictures/school/ncut_icon.png" alt="ncut_icon" style="zoom:75%;" /></center>
+<center><img src="../figure/ncut_icon.png" alt="ncut_icon" style="zoom:75%;" /></center>
 
 
 
@@ -10,9 +10,6 @@
 <center><div style='height:2mm;'></div><div style="font-size:15pt;">Author: Jingbo Su</div></center>
 <center><span style="font-size:12pt;line-height:9mm"><i>North China University of Technology</i></span>
 <div style="page-break-after: always;"></div>
-
-
-
 # 目录
 
 
