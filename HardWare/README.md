@@ -1,4 +1,17 @@
-![ncut_icon](https://user-images.githubusercontent.com/73683961/188805020-e33c1ee0-5663-41d6-853d-6014503442b7.png)
+<center><img src="/Users/sudo/Pictures/school/school_title.jpeg" alt="school_title" style="zoom:80%;" /></center>
+
+
+
+<center><img src="/Users/sudo/Pictures/school/ncut_icon.png" alt="ncut_icon" style="zoom:75%;" /></center>
+
+
+
+
+<center><div style='height:2mm;'></div><div style="font-size:15pt;">Author: Jingbo Su</div></center>
+<center><span style="font-size:12pt;line-height:9mm"><i>North China University of Technology</i></span>
+<div style="page-break-after: always;"></div>
+
+
 
 # 目录
 
@@ -279,6 +292,20 @@ Display_third_word ---> End
 
 ### 2.3 设计及内部结构
 
+<div style="display: flex">
+    <div style="float: left, width: 33.33%, padding: 10px">
+        <img src="./figure/exe_su.png" alt="Su" style="width:100%">
+    </div>
+    <div style="float: left, width: 33.33%, padding: 10px">
+        <img src="./figure/exe_jing.png" alt="Su" style="width:100%">
+    </div>
+    <div style="float: left, width: 33.33%, padding: 10px">
+        <img src="./figure/exe_bo.png" alt="Su" style="width:100%">
+    </div>
+</div>
+
+
+
 <img width="829" alt="schematic" src="https://user-images.githubusercontent.com/73683961/188806039-3be37f5e-6d40-4d70-8104-7b8d6388f9ac.png">
 
 ### 2.4 VHDL源代码及解释
@@ -418,11 +445,41 @@ endmodule
 
 ### 2.6 FPGA实验截图
 
+<div style="display: flex">
+    <div style="float: left, width: 33.33%, padding: 10px">
+        <img src="./figure/final_su.JPG" alt="Su" style="width:100%">
+    </div>
+    <div style="float: left, width: 33.33%, padding: 10px">
+        <img src="./figure/final_jing.JPG" alt="Su" style="width:100%">
+    </div>
+    <div style="float: left, width: 33.33%, padding: 10px">
+        <img src="./figure/final_bo.JPG" alt="Su" style="width:100%">
+    </div>
+</div>
+
 ### 2.7 问题描述及解决方案
 
 由于选择的是行刷新方式，导致名字汉字横在屏幕上输出，但结果是正确的，无伤大雅；
 
-如果实验箱上的频率选择不合适，会导致拍照不完整/录像时明显看出刷新迹象，可以通过调节实验箱频率以获得最佳拍照频率完成拍照✅；
+如果实验箱上的频率选择不合适，会导致拍照不完整/录像时明显看出刷新迹象:
+
+<div style="display: flex">
+    <div style="float: left, width: 33.33%, padding: 10px">
+        <img src="./figure/half_su.JPG" alt="Su" style="width:100%">
+    </div>
+    <div style="float: left, width: 33.33%, padding: 10px">
+        <img src="./figure/half_jing.JPG" alt="Su" style="width:100%">
+    </div>
+    <div style="float: left, width: 33.33%, padding: 10px">
+        <img src="./figure/half_bo.JPG" alt="Su" style="width:100%">
+    </div>
+</div>
+
+可以通过调节实验箱频率以获得最佳拍照频率完成拍照✅；
+
+
+
+可以通过调节实验箱频率以获得最佳拍照频率完成拍照✅；
 
 初次设计时按照汉字生成器生成的点阵排布输出的名字是镜像的，不是很清楚原因不过写了一段程序将字符串特定部分进行reverse就成功地正确显示了✅;
 
