@@ -1,4 +1,6 @@
-![ncut_icon](https://user-images.githubusercontent.com/73683961/188805020-e33c1ee0-5663-41d6-853d-6014503442b7.png)
+<p align="center">
+  <img src="../figure/ncut_icon.png" />
+</p>
 
 # 目录
 
