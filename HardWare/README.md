@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <center><img src="/Users/sudo/Pictures/school/school_title.jpeg" alt="school_title" style="zoom:80%;" /></center>
 
 
@@ -12,6 +13,11 @@
 <div style="page-break-after: always;"></div>
 
 
+=======
+<p align="center">
+  <img src="../figure/ncut_icon.png" />
+</p>
+>>>>>>> 324267d8b7ca41e7683c2c9640193a17f1ae0cd7
 
 # 目录
 
