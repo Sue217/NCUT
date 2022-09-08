@@ -1,31 +1,22 @@
-<<<<<<< HEAD
-<center><img src="../figure/school_title.jpeg" alt="school_title" style="zoom:80%;" /></center>
-=======
-<<<<<<< HEAD
-<center><img src="/Users/sudo/Pictures/school/school_title.jpeg" alt="school_title" style="zoom:80%;" /></center>
->>>>>>> b4ee204564d72f6626b19dcd4125ccc5a5914dc1
-
-
-
-<center><img src="../figure/ncut_icon.png" alt="ncut_icon" style="zoom:75%;" /></center>
-
-
-
-
-<center><div style='height:2mm;'></div><div style="font-size:15pt;">Author: Jingbo Su</div></center>
-<center><span style="font-size:12pt;line-height:9mm"><i>North China University of Technology</i></span>
-<div style="page-break-after: always;"></div>
-<<<<<<< HEAD
-=======
-
-
-=======
 <p align="center">
-  <img src="../figure/ncut_icon.png" />
+  <img src="../figure/school_title.jpeg" alt="school_title" style="zoom:80%;" />
 </p>
->>>>>>> 324267d8b7ca41e7683c2c9640193a17f1ae0cd7
 
->>>>>>> b4ee204564d72f6626b19dcd4125ccc5a5914dc1
+<p align="center">
+  <img src="../figure/ncut_icon.png" alt="ncut_icon" style="zoom:75%;" />
+</p>
+
+</br></br></br>
+
+<p align="center">
+  <span style="font-size:12pt;line-height:9mm"><i>Author: Jingbo Su</i></span>
+</div></p>
+
+<p align="center">
+  <span style="font-size:12pt;line-height:9mm"><i>North China University of Technology</i></span>
+</div></p>
+</br></br></br></br></br>
+
 # 目录
 
 
@@ -305,20 +296,6 @@ Display_third_word ---> End
 
 ### 2.3 设计及内部结构
 
-<div style="display: flex">
-    <div style="float: left, width: 33.33%, padding: 10px">
-        <img src="./figure/exe_su.png" alt="Su" style="width:100%">
-    </div>
-    <div style="float: left, width: 33.33%, padding: 10px">
-        <img src="./figure/exe_jing.png" alt="Su" style="width:100%">
-    </div>
-    <div style="float: left, width: 33.33%, padding: 10px">
-        <img src="./figure/exe_bo.png" alt="Su" style="width:100%">
-    </div>
-</div>
-
-
-
 <img width="829" alt="schematic" src="https://user-images.githubusercontent.com/73683961/188806039-3be37f5e-6d40-4d70-8104-7b8d6388f9ac.png">
 
 ### 2.4 VHDL源代码及解释
@@ -458,39 +435,13 @@ endmodule
 
 ### 2.6 FPGA实验截图
 
-<div style="display: flex">
-    <div style="float: left, width: 33.33%, padding: 10px">
-        <img src="./figure/final_su.JPG" alt="Su" style="width:100%">
-    </div>
-    <div style="float: left, width: 33.33%, padding: 10px">
-        <img src="./figure/final_jing.JPG" alt="Su" style="width:100%">
-    </div>
-    <div style="float: left, width: 33.33%, padding: 10px">
-        <img src="./figure/final_bo.JPG" alt="Su" style="width:100%">
-    </div>
-</div>
+😅
 
 ### 2.7 问题描述及解决方案
 
 由于选择的是行刷新方式，导致名字汉字横在屏幕上输出，但结果是正确的，无伤大雅；
 
-如果实验箱上的频率选择不合适，会导致拍照不完整/录像时明显看出刷新迹象:
-
-<div style="display: flex">
-    <div style="float: left, width: 33.33%, padding: 10px">
-        <img src="./figure/half_su.JPG" alt="Su" style="width:100%">
-    </div>
-    <div style="float: left, width: 33.33%, padding: 10px">
-        <img src="./figure/half_jing.JPG" alt="Su" style="width:100%">
-    </div>
-    <div style="float: left, width: 33.33%, padding: 10px">
-        <img src="./figure/half_bo.JPG" alt="Su" style="width:100%">
-    </div>
-</div>
-
-可以通过调节实验箱频率以获得最佳拍照频率完成拍照✅；
-
-
+如果实验箱上的频率选择不合适，会导致拍照不完整/录像时明显看出刷新迹象，可以通过调节实验箱频率以获得最佳拍照频率完成拍照✅；
 
 可以通过调节实验箱频率以获得最佳拍照频率完成拍照✅；
 
