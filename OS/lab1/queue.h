@@ -28,7 +28,7 @@ queue_t create() {
   head->next = head->prev = tail;
   tail->prev = tail->next = head;
   // head->pcb = process[0];
-  qsize = 1;
+  // qsize = 1;
   return head;
 }
 
