@@ -16,13 +16,13 @@ void __init_lru__() {
   lst = create();
 }
 
-double lru(int value, int ram) {
+int lru(int value, int ram) {
   const int max_size = ram * __1K__;
   list_t target = is_hit(lst, value);
   if (target != NULL) {
     // hit
     replace(lst, target);
-    return 0.0;
+    return 0;
   }
   // didn't hit
   int a[__1K__];
@@ -37,7 +37,7 @@ double lru(int value, int ram) {
     // list is not full
     append(lst, a);
   }
-  return 1.0;
+  return 1;
 }
 
 #endif  // __LRU_H__

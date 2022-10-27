@@ -53,13 +53,13 @@ int main(int argc, char* argv[]) {
     while (steps > 0) {
       __generate__(&steps, &flip, &addr);
       if (strategy == 1) {
-        miss_fifo += fifo(ins[addr], ram);
+        miss_fifo += (double) fifo(ins[addr], ram);
       } else
       if (strategy == 2) {
-        miss_lru += lru(ins[addr], ram);
+        miss_lru += (double) lru(ins[addr], ram);
       } else {
-        miss_fifo += fifo(ins[addr], ram);
-        miss_lru += lru(ins[addr], ram);
+        miss_fifo += (double) fifo(ins[addr], ram);
+        miss_lru += (double) lru(ins[addr], ram);
       }
       steps -= 1;
     }

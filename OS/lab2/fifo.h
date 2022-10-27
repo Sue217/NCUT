@@ -1,6 +1,6 @@
 /*
  *  author: Jingbo Su
- * created: Oct 13 2022
+ *  created: Oct 13 2022
 **/
 
 #ifndef __FIFO_H__
@@ -18,12 +18,12 @@ void __init_fifo__() {
   idx = size = 0;
 }
 
-double fifo(int value, int ram) {
+int fifo(int value, int ram) {
   const int max_size = ram * __1K__;
   for (int i = 0; i < max_size; i++) {
     if (value == user_vm[i]) {
       // hit
-      return 0.0;
+      return 0;
     }
   }
   // didn't hit
@@ -32,7 +32,7 @@ double fifo(int value, int ram) {
     user_vm[idx] = ins[j];
   }
   idx %= max_size;
-  return 1.0;
+  return 1;
 }
 
 #endif // __FIFO_H__
