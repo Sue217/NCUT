@@ -23,6 +23,11 @@ WHERE Score.sno IN (
     FROM STUDENT_CS
 );
 
+-- SELECT *
+-- FROM Student, Course, Score
+-- WHERE (Student.sno = Score.sno)
+--     AND (Course.cno = Score.cno);
+
 SELECT STUDENT_CS.sno, STUDENT_CS.sname, Score.grade
 FROM STUDENT_CS, Score
 WHERE STUDENT_CS.sno = Score.sno

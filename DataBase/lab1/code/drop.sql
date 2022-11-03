@@ -5,3 +5,4 @@ DROP TABLE `Student`;
 DROP TABLE `Course`;
 DROP TABLE `Teacher`;
 DROP TABLE `Score`;
+DROP TABLE `S1`;
