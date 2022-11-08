@@ -1,0 +1,55 @@
+students =
+{
+	_id: '20105050110',
+	name: 'Jingbo Su',
+	gender: 'Male',
+	age: 20,
+	dept: 'Computer Science',
+	hobby: ['eat', 'sleep'],
+	date: Date()
+}
+
+[{
+	_id: '30105050210',
+	name: 'Harry Potter',
+	gender: 'Male',
+	age: 22,
+	dept: 'Gryffindor',
+	hobby: ['study', 'quidditch'],
+	date: Date()
+},
+{
+	_id: '30105050211',
+	name: 'Ron Weasley',
+	gender: 'Male',
+	age: 22,
+	dept: 'Gryffindor',
+	hobby: ['sleep', 'eat'],
+},
+{
+	_id: '30105050213',
+	name: 'Hermione Granger',
+	gender: 'Female',
+	age: 21,
+	dept: 'Gryffindor',
+	hobby: ['study'],
+	date: Date()
+},
+{
+	_id: '30105050314',
+	name: 'Draco Malfoy',
+	gender: 'Male',
+  age: 1,
+	dept: 'Slughorn',
+	date: Date()
+}]
+
+{
+  _id: '30105050000',
+  name: 'Albus Dumbledore',
+  gender: 'Male',
+  age: 160,
+  dept: 'Hogwarts',
+  hobby: ['think', 'predict'],
+  date: Date()
+}
