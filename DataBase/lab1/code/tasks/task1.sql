@@ -3,5 +3,5 @@
 
 USE NCUT;
 
-SELECT Student.sno, Student.sname, 2022 - Student.sage
+SELECT Student.sno, Student.sname, (2022 - Student.sage) AS birth
 FROM Student
