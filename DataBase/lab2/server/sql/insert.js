@@ -59,5 +59,31 @@ export default function insert_items() {
         ('006', '221', 99), \
         ('006', '828', 90), \
         ('006', '75p', 99);";
-  return [insert_student.toString(), insert_course.toString(), insert_teacher.toString(), insert_score.toString()];
+  const load_1 = "CREATE TABLE IF NOT EXISTS `S1` ( \
+                      sno char(20) NOT NULL, \
+                      sname char(20) NOT NULL, \
+                      sd char(30) NOT NULL, \
+                      sa int NOT NULL, \
+                      PRIMARY KEY (sno) \
+                  );"
+  const load_2 = "INSERT INTO `S1` \
+                  SELECT Student.sno, Student.sname, Student.sdept, Student.sage \
+                  FROM Student \
+                  WHERE Student.sdept = 'Computer Science';";
+  const load_3 = "SET SQL_SAFE_UPDATES = 0;";
+  const load_4 = "CREATE VIEW `STUDENT_CS` \
+                  AS \
+                  SELECT * \
+                  FROM Student \
+                  WHERE Student.sdept = 'Computer Science';";
+  const load_5 = "UPDATE Score \
+                  SET Score.grade = \
+                  CASE WHEN Score.grade <= 95 THEN Score.grade + 5 \
+                  ELSE 100 END \
+                  WHERE Score.sno IN ( \
+                      SELECT Score.sno \
+                      FROM STUDENT_CS \
+                  );";
+
+  return [insert_student, insert_course, insert_teacher, insert_score, load_1, load_2, load_3, load_4, load_5];
 }

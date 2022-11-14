@@ -11,7 +11,7 @@ const db = mysql.createPool({
 });
 
 import bodyParser from 'body-parser';
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // provides a Connect/Express middleware that can be used to enable CORS with various options.
 import cors from 'cors';
@@ -24,20 +24,127 @@ app.post('/api/insert', (req, res) => {
   // var insert = fs.readFileSync("../../lab1/code/insert.sql").toString();
   const sqlInsert = insert_items();
   // console.log(sqlInsert);
-  
+
+  let resList = [];
   for (let i = 0; i < sqlInsert.length; i++) {
     db.query(sqlInsert[i], (err, result) => {
-      res.send(err);
+      resList.push(result);
     });
   }
+  res.send(resList);
   // display
   // res.send("Hello World!");
 });
 
 import { tasks } from './sql/tasks.js';
 
+app.post('/api/get/createA', (req, res) => {
+  let sqlList = tasks(10).slice(0, -1);
+  for (let i = 0; i < sqlList.length; i++) {
+    db.query(sqlList[i].trim() + ';', (err, result) => {
+      try {
+        resList.push(err);
+      } catch (e) {
+        console.log("[DEBUG]: query error on stmt `" + sqlList[i] + "`");
+        console.log("[DEBUG]: error = [" + err + "]");
+        console.log("[DEBUG]: panic = [" + e + "]");
+        process.exit(-1);
+      }
+    });
+  }
+  res.send(resList);
+})
+
+app.post('/api/get/task0', (req, res) => {
+  let sqlList = tasks(0).split(";");
+  let resList = [];
+  for (let i = 0; i < sqlList.length; i++) {
+    db.query(sqlList[i].trim() + ';', (err, result) => {
+      try {
+        resList.push(result);
+      } catch (e) {
+        console.log("[DEBUG]: query error on stmt `" + sqlList[i] + "`");
+        console.log("[DEBUG]: error = [" + err + "]");
+        console.log("[DEBUG]: panic = [" + e + "]");
+        process.exit(-1);
+      }
+    });
+  }
+  res.send(resList);
+});
+
 app.get('/api/get/task1', (req, res) => {
   const sqlSelect = tasks(1);
+  db.query(sqlSelect, (err, result) => {
+    res.send(result);
+  });
+});
+
+app.get('/api/get/task2', (req, res) => {
+  const sqlSelect = tasks(2);
+  db.query(sqlSelect, (err, result) => {
+    res.send(result);
+  });
+});
+
+app.get('/api/get/task3', (req, res) => {
+  const sqlSelect = tasks(3);
+  db.query(sqlSelect, (err, result) => {
+    res.send(result);
+  });
+});
+
+app.get('/api/get/task4', (req, res) => {
+  const sqlSelect = tasks(4);
+  db.query(sqlSelect, (err, result) => {
+    res.send(result);
+  });
+});
+
+app.get('/api/get/task5', (req, res) => {
+  const sqlSelect = tasks(5);
+  db.query(sqlSelect, (err, result) => {
+    res.send(result);
+  });
+});
+
+app.get('/api/get/task6', (req, res) => {
+  const sqlSelect = tasks(6);
+  db.query(sqlSelect, (err, result) => {
+    res.send(result);
+  });
+});
+
+app.get('/api/get/task7', (req, res) => {
+  const sqlSelect = tasks(7);
+  db.query(sqlSelect, (err, result) => {
+    res.send(result);
+  });
+});
+
+app.get('/api/get/task8', (req, res) => {
+  const sqlSelect = tasks(8);
+  db.query(sqlSelect, (err, result) => {
+    res.send(result);
+  });
+});
+
+app.get('/api/get/task9', (req, res) => {
+  const sqlSelect = tasks(9);
+  db.query(sqlSelect, (err, result) => {
+    res.send(result);
+  });
+});
+
+app.get('/api/get/task10', (req, res) => {
+  const sqlSelect = tasks(10);
+  db.query(sqlSelect, (err, result) => {
+    res.send(result);
+  });
+});
+
+app.get('/api/get/task11', (req, res) => {
+  const sqlSelect = tasks(11);
   db.query(sqlSelect, (err, result) => {
     res.send(result);
   });

@@ -18,7 +18,7 @@
 
 .opt_btn {
   display: inline-block;
-  background: rgb(198, 29, 142);
+  background: rgb(255,192,203);
   color: rgb(6, 17, 164);
   border: none;
   padding: 10px 20px;
@@ -54,4 +54,24 @@
   height: 450px;
   margin: 10px;
   font-size: 25px;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  border:1px solid black;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  border:1px solid black;
+  width: 20%;
+
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
 }
