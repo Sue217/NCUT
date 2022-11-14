@@ -38,40 +38,27 @@ app.post('/api/insert', (req, res) => {
 
 import { tasks } from './sql/tasks.js';
 
-app.post('/api/get/createA', (req, res) => {
-  let sqlList = tasks(10).slice(0, -1);
-  for (let i = 0; i < sqlList.length; i++) {
-    db.query(sqlList[i].trim() + ';', (err, result) => {
-      try {
-        resList.push(err);
-      } catch (e) {
-        console.log("[DEBUG]: query error on stmt `" + sqlList[i] + "`");
-        console.log("[DEBUG]: error = [" + err + "]");
-        console.log("[DEBUG]: panic = [" + e + "]");
-        process.exit(-1);
-      }
-    });
-  }
-  res.send(resList);
-})
-
-app.post('/api/get/task0', (req, res) => {
-  let sqlList = tasks(0).split(";");
-  let resList = [];
-  for (let i = 0; i < sqlList.length; i++) {
-    db.query(sqlList[i].trim() + ';', (err, result) => {
-      try {
-        resList.push(result);
-      } catch (e) {
-        console.log("[DEBUG]: query error on stmt `" + sqlList[i] + "`");
-        console.log("[DEBUG]: error = [" + err + "]");
-        console.log("[DEBUG]: panic = [" + e + "]");
-        process.exit(-1);
-      }
-    });
-  }
-  res.send(resList);
-});
+try {
+  app.get('/api/get/task0', (req, res) => {
+    let sqlList = tasks(0).split(";");
+    let resList = [];
+    for (let i = 0; i < sqlList.length; i++) {
+      db.query(sqlList[i].trim() + ';', (err, result) => {
+        try {
+          resList.push(result);
+        } catch (e) {
+          console.log("[DEBUG]: query error on stmt `" + sqlList[i] + "`");
+          console.log("[DEBUG]: error = [" + err + "]");
+          console.log("[DEBUG]: panic = [" + e + "]");
+          process.exit(-1);
+        }
+      });
+    }
+    res.send(resList);
+  });
+} catch (e) {
+  console.log('[Get] 404 Not Found!');
+}
 
 app.get('/api/get/task1', (req, res) => {
   const sqlSelect = tasks(1);

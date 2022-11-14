@@ -19,9 +19,13 @@ const insert_btn = () => {
   });
 }
 
-Axios.post("http://localhost:3001/api/get/task0").then(() => {
-  alert("Loaded and Created");
-});
+try {
+  Axios.get("http://localhost:3001/api/get/task0").then(() => {
+    alert("Loaded and Created");
+  });
+} catch (e) {
+  console.log('404 Not Found');
+}
 
 function App() {
   const [button, setButton] = useState(0)
@@ -40,10 +44,7 @@ function App() {
     <div className="App">
       <h1>SQL APPLICATION</h1>
       <h4>---  Jingbo Su from NCUT  ---</h4>
-      {/* <div className='form'>
-        <label>Response</label>
-        <input type="textbox" name="display"></input>
-      </div> */}
+      
       <div>
         <button className='func_btn' onClick={insert_btn}>Insert</button>
         <button className='opt_btn' onClick={() => {setButton(1)}}>Task 1</button>
@@ -58,6 +59,13 @@ function App() {
         <button className='opt_btn' onClick={() => {setButton(10)}}>Task A</button>
         <button className='opt_btn' onClick={() => {setButton(11)}}>Task B</button>
 
+        <div className='form'>
+          <label>Lower Bound (ONLY for task 11)</label>
+          <input type="textbox" name="lob"></input>
+          <label>Higher Bound (ONLY for task 11)</label>
+          <input type="textbox" name="hib"></input>
+          <button>Submit</button>
+        </div>
 
         {resList.map((val) => {
           switch (button) {
