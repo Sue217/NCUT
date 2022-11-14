@@ -3,7 +3,7 @@
 
 USE NCUT;
 
-CREATE TABLE `S1` (
+CREATE TABLE IF NOT EXISTS `S1` (
     sno char(20) NOT NULL,
     sname char(20) NOT NULL,
     sd char(30) NOT NULL,
@@ -18,4 +18,4 @@ WHERE Student.sdept = 'Computer Science';
 
 SELECT * FROM S1;
 -- SHOW COLUMNS FROM S1;
--- DROP TABLE S1
+DROP TABLE S1

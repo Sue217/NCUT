@@ -3,7 +3,7 @@
 
 USE NCUT;
 
-SELECT sdept, COUNT(sno)
+SELECT sdept, COUNT(sno) AS total
 FROM Student
 GROUP BY sdept
 ORDER BY COUNT(sno) DESC

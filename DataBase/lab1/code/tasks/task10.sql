@@ -10,8 +10,6 @@ SELECT *
 FROM Student
 WHERE Student.sdept = 'Computer Science';
 
--- DROP VIEW `STUDENT_CS`;
-
 -- SELECT * FROM STUDENT_CS;
 
 UPDATE Score
@@ -30,4 +28,6 @@ WHERE Score.sno IN (
 
 SELECT STUDENT_CS.sno, STUDENT_CS.sname, Score.grade
 FROM STUDENT_CS, Score
-WHERE STUDENT_CS.sno = Score.sno
+WHERE STUDENT_CS.sno = Score.sno;
+
+DROP VIEW `STUDENT_CS`;
