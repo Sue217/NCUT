@@ -6,16 +6,14 @@ const Table5 = ({ val }) => {
     );
   }
   return (
-    <div>
-      <table>
-        <tbody>
-          <tr>
-            <td>{val.sname}</td>
-            <td>{val.sdept}</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <table>
+      <tbody>
+        <tr>
+          <td>{val.sname}</td>
+          <td>{val.sdept}</td>
+        </tr>
+      </tbody>
+    </table>
   )
 }
 
