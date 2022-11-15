@@ -84,6 +84,19 @@ export default function insert_items() {
                       SELECT Score.sno \
                       FROM STUDENT_CS \
                   );";
+  const load_6 = "DELIMITER // \
+                  CREATE PROCEDURE __PROCEDURE_TASK__(IN LOW int, IN HIGH int) \
+                  BEGIN \
+                      SET @LB = LOW; \
+                      SET @HB = HIGH; \
+                      SELECT Student.sname, Student.sdept, Score.grade \
+                      FROM Student, Course, Score \
+                      WHERE Course.cname = 'Data Base' \
+                          AND Student.sno = Score.sno \
+                          AND Course.cno = Score.cno \
+                          AND Score.grade BETWEEN @LB AND @HB; \
+                  END // \
+                  DELIMITER ;";
 
-  return [insert_student, insert_course, insert_teacher, insert_score, load_1, load_2, load_3, load_4, load_5];
+  return [insert_student, insert_course, insert_teacher, insert_score, load_1, load_2, load_3, load_4, load_5, load_6];
 }

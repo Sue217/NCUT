@@ -2,10 +2,15 @@
   text-align: center;
 }
 
+div {
+  margin: 25px;
+  /* 620px or 745px in width */
+}
+
 .func_btn {
   display: inline-block;
-  background: rgb(6, 51, 129);
-  color: rgb(255, 255, 255);
+  background: rgb(62, 38, 243);
+  color: rgb(254, 236, 217);
   border: none;
   padding: 10px 20px;
   margin: 5px;
@@ -46,12 +51,13 @@
 .form {
   display: flex;
   flex-direction: column;
-  align-items: left;
+  align-items: center;
+  justify-content: center;
 }
 
-.form display {
+.form input {
   width: 300px;
-  height: 450px;
+  height: 60px;
   margin: 10px;
   font-size: 25px;
 }
@@ -69,7 +75,6 @@ td, th {
   padding: 8px;
   border:1px solid black;
   width: 20%;
-
 }
 
 tr:nth-child(even) {

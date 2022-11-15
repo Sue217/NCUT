@@ -103,20 +103,6 @@ export function tasks (task) {
   var task10 = "SELECT STUDENT_CS.sno, STUDENT_CS.sname, Score.grade \
                 FROM STUDENT_CS, Score \
                 WHERE STUDENT_CS.sno = Score.sno;";
-  var task11 = "DELIMITER \/\/ \
-                DROP PROCEDURE IF EXISTS `__PROCEDURE_TASK__`; \
-                CREATE PROCEDURE __PROCEDURE_TASK__(IN LOW int, IN HIGH int) \
-                BEGIN \
-                    SET @LB = LOW; \
-                    SET @HB = HIGH; \
-                    SELECT Student.sname, Student.sdept, Score.grade \
-                    FROM Student, Course, Score \
-                    WHERE Course.cname = 'Data Base' \
-                        AND Student.sno = Score.sno \
-                        AND Course.cno = Score.cno \
-                        AND Score.grade BETWEEN @LB AND @HB; \
-                END \/\/ \
-                DELIMITER ;";
-  const dict = [task0, task1, task2, task3, task4, task5, task6, task7, task8, task9, task10, task11];
+  const dict = [task0, task1, task2, task3, task4, task5, task6, task7, task8, task9, task10];
   return dict[task].toString();
 }

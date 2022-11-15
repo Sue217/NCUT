@@ -1,4 +1,4 @@
-import express from 'express';
+import express, { response } from 'express';
 const app = express();
 app.use(express.json());  // grab the information as a json from the front-end
 
@@ -130,11 +130,20 @@ app.get('/api/get/task10', (req, res) => {
   });
 });
 
-app.get('/api/get/task11', (req, res) => {
-  const sqlSelect = tasks(11);
-  db.query(sqlSelect, (err, result) => {
+var lower = 0;
+var higher = 0;
+
+app.post('/api/fetch/values', (req, res) => {
+  lower = parseInt(req.body.min);
+  higher = parseInt(req.body.max);
+});
+
+app.get('/api/fetch/result', (req, res) => {
+  // console.log(lower, higher, typeof(lower), typeof(higher));
+  const sqlCall = "CALL __PROCEDURE_TASK__(?,?)";
+  db.query(sqlCall, [lower, higher], (err, result) => {
     res.send(result);
-  });
+  })
 });
 
 app.listen(3001, () => {

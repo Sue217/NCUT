@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
 import './App.css';
 import Table1 from './component/Table1';
@@ -31,13 +31,31 @@ function App() {
   const [button, setButton] = useState(0)
   const [resList, setResList] = useState([])
 
+  const [min, setMin] = useState('');
+  const [max, setMax] = useState('');
+
+  const submitValue = () => {
+    alert("Bound Checked!");
+    Axios.post("http://localhost:3001/api/fetch/values", {
+      min: min,
+      max: max,
+    })
+  };
+
   const path = "http://localhost:3001/api/get/task";
 
   useEffect(() => {
-    Axios.get(path + button.toString())
-      .then((response) => {
-        setResList(response.data);
-      });
+    if (button !== 11) {
+      Axios.get(path + button.toString())
+        .then((response) => {
+          setResList(response.data);
+        });
+    } else {
+      Axios.get("http://localhost:3001/api/fetch/result")
+        .then((response) => {
+          setResList(response.data[0]);
+        });
+    }
   }, [resList, button]);
 
   return (
@@ -47,24 +65,24 @@ function App() {
       
       <div>
         <button className='func_btn' onClick={insert_btn}>Insert</button>
-        <button className='opt_btn' onClick={() => {setButton(1)}}>Task 1</button>
-        <button className='opt_btn' onClick={() => {setButton(2)}}>Task 2</button>
-        <button className='opt_btn' onClick={() => {setButton(3)}}>Task 3</button>
-        <button className='opt_btn' onClick={() => {setButton(4)}}>Task 4</button>
-        <button className='opt_btn' onClick={() => {setButton(5)}}>Task 5</button>
-        <button className='opt_btn' onClick={() => {setButton(6)}}>Task 6</button>
-        <button className='opt_btn' onClick={() => {setButton(7)}}>Task 7</button>
-        <button className='opt_btn' onClick={() => {setButton(8)}}>Task 8</button>
-        <button className='opt_btn' onClick={() => {setButton(9)}}>Task 9</button>
-        <button className='opt_btn' onClick={() => {setButton(10)}}>Task A</button>
-        <button className='opt_btn' onClick={() => {setButton(11)}}>Task B</button>
+        <button className='opt_btn' onClick={() => { setButton(1) }}>Task 1</button>
+        <button className='opt_btn' onClick={() => { setButton(2) }}>Task 2</button>
+        <button className='opt_btn' onClick={() => { setButton(3) }}>Task 3</button>
+        <button className='opt_btn' onClick={() => { setButton(4) }}>Task 4</button>
+        <button className='opt_btn' onClick={() => { setButton(5) }}>Task 5</button>
+        <button className='opt_btn' onClick={() => { setButton(6) }}>Task 6</button>
+        <button className='opt_btn' onClick={() => { setButton(7) }}>Task 7</button>
+        <button className='opt_btn' onClick={() => { setButton(8) }}>Task 8</button>
+        <button className='opt_btn' onClick={() => { setButton(9) }}>Task 9</button>
+        <button className='opt_btn' onClick={() => { setButton(10) }}>Task A</button>
+        <button className='opt_btn' onClick={() => { setButton(11) }}>Task B</button>
 
         <div className='form'>
           <label>Lower Bound (ONLY for task 11)</label>
-          <input type="textbox" name="lob"></input>
+          <input type="textbox" name="min" onChange={(e) => { setMin(e.target.value) }}></input>
           <label>Higher Bound (ONLY for task 11)</label>
-          <input type="textbox" name="hib"></input>
-          <button>Submit</button>
+          <input type="textbox" name="max" onChange={(e) => { setMax(e.target.value) }}></input>
+          <button onClick={submitValue}>Submit</button>
         </div>
 
         {resList.map((val) => {
