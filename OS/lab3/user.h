@@ -1,21 +1,24 @@
 // system calls
+#ifndef __USER_H__
+#define __USER_H__
 
 #define MAX_LEN 256
 
-void file_create(char* file_name) {
-  char cmd[MAX_LEN];
-  snprintf(cmd, sizeof cmd, "touch %s", file_name);
-  system(cmd);
-}
+#define SUCCESS 200
+#define FAILED 400
 
-void file_delete(char* file_name) {
-  char cmd[MAX_LEN];
-  snprintf(cmd, sizeof cmd, "rm -rf %s", file_name);
-  system(cmd);
-}
+int f_create(char* file_name, char* mode, char* type);  // return file descriptor
 
-void file_open(char* file_name) {
-  char cmd[MAX_LEN];
-  snprintf(cmd, sizeof cmd, "open %s", file_name);
-  system(cmd);
-}
+int f_delete(char* file_name); // delete through file name, return status
+
+int f_open(char* file_name);
+
+int f_close(char* file_name);
+
+char* f_read(char* file_name);
+
+int f_write(char* file_name, char* content);
+
+
+
+#endif  // __USER_H__

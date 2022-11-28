@@ -5,23 +5,22 @@
 int grow(int total, int bid) {
   while (total--) {
     // check next block number
-    int nn = dbs[bid].next;
+    int nn = dbs[bid].next_block;
     if (nn == LAST) {
       int eb = find_empty_block();
-      dbs[bid].next = eb;
-      dbs[eb].next = LAST;
+      dbs[bid].next_block = eb;
+      dbs[eb].next_block = LAST;
     }
-    bid = dbs[bid].next;
+    bid = dbs[bid].next_block;
   }
   return bid;
 }
 
-int shrink(int bid) {
+void shrink(int bid) {
 //  printf("bid = %d\n", bid);
-  int nn = dbs[bid].next;
+  int nn = dbs[bid].next_block;
   if (nn >= 0) {
     shrink(nn);
   }
-  dbs[bid].next = INIT; //! or LAST?
-  return bid;
+  dbs[bid].next_block = INIT; //! or LAST?
 }

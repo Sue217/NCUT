@@ -1,3 +1,3 @@
 clear
-gcc -o test getb.c fixsize.c finde.c print.c fs.c main.c -std=c11 -Wall -Werror
-./test > result.txt
+gcc -g getb.c fixsize.c finde.c print.c user.c fs.c main.c -std=c11 -Wall -Werror
+./a.out

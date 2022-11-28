@@ -11,12 +11,12 @@ void print() {
   printf("[Inode Info]\n");
   struct inode* ip = inodes;
   for (int i = 0; i < sb.ninodes; i++, ip++) {
-    printf("\t[size] %d, [first] %d, [name] %s\n", ip->size, ip->first, ip->name);
+    printf("\t[size] %d, [first] %d, [name] %s\n", ip->size, ip->first_block, files[ip->inum].name);
   }
 
   printf("[Block Info]\n");
   struct diskblock* dp = dbs;
   for (int i = 0; i < sb.nblocks; i++, dp++) {
-    printf("\t[cur num] %d, [next num] %d, [data] %s\n", i, dp->next, dp->data);
+    printf("\t[cur num] %d, [next num] %d, [data] %s\n", i, dp->next_block, dp->data);
   }
 }
