@@ -68,7 +68,7 @@ int f_create(char* file_name, char* mode, char* type) {
   }
 
   files[fd].type = tp;
-  printf("type = %d\n", tp);
+//  printf("type = %d\n", tp);
 
   // return the file descriptor
   return fd;
@@ -78,6 +78,7 @@ int f_delete(char* file_name) {
   struct file* fp = files;
   for (int i = 0; i < sb.ninodes; i++, fp++) {
     if (strcmp(file_name, fp->name) == 0) {
+      memset(fp->name, 0, sizeof(fp->name));
       fs_free(fp->ip->first_block);
       return SUCCESS;
     }
@@ -85,41 +86,47 @@ int f_delete(char* file_name) {
   return FAILED;
 }
 
-int f_open(char* file_name) {
-  // I don't know what to do...
-  return 0;
+int f_open(int fd) {
+  if (files[fd].type == FOLDERS) {
+    printf("Not a file ");
+    return FAILED;
+  }
+  return SUCCESS;
 }
 
-int f_close(char* file_name) {
-  // I don't know what to do...
-  return 0;
+int f_close(int fd) {
+  if (files[fd].type == FOLDERS) {
+//    puts("Not a file");
+    return FAILED;
+  }
+  return SUCCESS;
 }
 
 char* f_read(char* file_name) {
   struct file* fp = files;
   for (int i = 0; i < sb.ninodes; i++, fp++) {
     if (strcmp(fp->name, file_name) == 0) {
-      if (fp->readable == 0) {
+      int fd = fp->ip->inum;
+      if (fp->readable == 0 || f_open(fd) == FAILED) {
         return NULL;
       }
-//      int fd = fp->ip->inum;
       fs_sync();
       int bid = fp->ip->first_block;
       int nn = 0;
-      char con[BLOCK_SIZE] = {0};
+      static char con[BLOCK_SIZE << 2] = {0};
       while (bid != LAST) {
         char tmp[BLOCK_SIZE] = {0};
         strcpy(tmp, dbs[bid].data);
-        printf("%lu\n%s\n", strlen(tmp), tmp);
+//        printf("%lu\n%s\n", strlen(tmp), dbs[bid].data);
         // copy data from disk block
         char* cc = tmp;
         while (*cc) {
           con[nn++] = *cc;
-          printf("%c", *cc);
+          cc++;
         }
-        puts("");
         bid = dbs[bid].next_block;
       }
+      f_close(fd);
       return con;
     }
   }
@@ -130,7 +137,9 @@ int f_write(char* file_name, char* content) {
   struct file* fp = files;
   for (int i = 0; i < sb.ninodes; i++, fp++) {
     if (strcmp(fp->name, file_name) == 0) {
-      if (fp->writable == 0) {
+      // write here
+      int fd = fp->ip->inum;
+      if (fp->writable == 0 || f_open(fd) == FAILED) {
         return FAILED;
       }
 
@@ -138,16 +147,35 @@ int f_write(char* file_name, char* content) {
       int len = (int) strlen(content);
       fp->ip->size += len;
 
-      // write here
-      int fd = fp->ip->inum;
       // alloc first
-      fs_alloc(fd, len);
+      int bid = fs_alloc(fd, len);
 
-      write_byte(fd, 0, content);
+//      write_byte(fd, 0, content);
+      strcpy(dbs[bid].data, content);
 
-      fs_sync();
+      f_close(fd);
       return SUCCESS;
     }
   }
   return FAILED;
+}
+
+void f_dir() {
+  struct file* fp = files;
+  for (int i = 0; i < sb.ninodes && fp->ip; i++, fp++) {
+    char prod[5] = "----";
+    if (fp->type == FOLDERS) {
+      prod[0] = 'd';
+    }
+    if (fp->readable == 1) {
+      prod[1] = 'r';
+    }
+    if (fp->writable == 1) {
+      prod[2] = 'w';
+    }
+    if (fp->executable == 1) {
+      prod[3] = 'x';
+    }
+    printf("%s    %p    %d    %s\n", prod, fp->ip, fp->ip->size, fp->name);
+  }
 }

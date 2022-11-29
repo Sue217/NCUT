@@ -45,7 +45,6 @@ struct diskblock* dbs;
 struct file* files;
 
 void fs_create();  // create new fs
-void fs_mount();   // load (read) the fs
 void fs_sync();    // write the fs
 
 int find_empty_inode();
@@ -56,7 +55,7 @@ int fs_init(char filename[NAME_SIZE], short mode, short type); // allocate the f
 int grow(int total, int bid);
 void shrink(int bid);
 
-void fs_alloc(int id, int size);     // set file size
+int fs_alloc(int id, int size);     // set file size
 void fs_free(int id);     // set file size
 
 int get_block_number(int fnum, int block);

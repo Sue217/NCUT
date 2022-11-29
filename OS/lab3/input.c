@@ -1,10 +1,15 @@
 #include <stdio.h>
+#include <string.h>
 
 #include "login.c"
 
-#define RETURN -1
+#define RETURN (-1)
+#define CLS (-2)
+
+char op[MAX_OP];
 
 int input(char *buf, int max_size) {
+  // get input command and return its length
   int nn = 0;
   char ch;
   while ((ch = getchar()) && ch != '\n' && nn + 1 < max_size) {
@@ -15,14 +20,18 @@ int input(char *buf, int max_size) {
   if (nn == 0 && ch == '\n') {
     return RETURN;
   }
+
+  if (strcmp(buf, "clear") == 0) {
+    return CLS;
+  }
 //  getchar();
 //  printf("%s\n", buf);
   return nn;
 }
 
-int check(char *op) {
+int check(char *ops) {
   for (int i = 0; i < TOTAL_OP; i++) {
-    if (match(op, Model[i])) {
+    if (match(ops, Model[i])) {
       return Tag[i];
     }
   }
@@ -30,8 +39,9 @@ int check(char *op) {
 }
 
 int parse(char *buf, char argv[][MAX_SIZE]) {
+  memset(op, 0, sizeof(op));
   char *sp = buf;
-  printf("buf: %s\n", buf);
+//  printf("buf: %s\n", buf);
   // leading space
   while (*sp == ' ' || *sp == '\n' || *sp == '\0') sp++;
 
@@ -40,14 +50,13 @@ int parse(char *buf, char argv[][MAX_SIZE]) {
 
   // parse the instruction
   // operation
-  char op[MAX_OP] = {0};
   int p = 0;
   while (*sp != ' ' && *sp) {
     op[p++] = *sp;
     sp++;
   }
   strcpy(argv[0], op);
-  printf("operation: %s\n", argv[0]);
+//  printf("operation: %s\n", argv[0]);
 
   // no file content
   if (*sp == '\0') return check(op);
@@ -63,7 +72,7 @@ int parse(char *buf, char argv[][MAX_SIZE]) {
     sp++;
   }
   strcpy(argv[1], fn);
-  printf("filename: %s\n", fn);
+//  printf("filename: %s\n", fn);
 
   // no mode
   if (*sp == '\0') return check(op);
@@ -87,7 +96,7 @@ int parse(char *buf, char argv[][MAX_SIZE]) {
   char md = *sp;
   sp++;
   strcpy(argv[2], &md);
-  printf("content: %c\n", md);
+//  printf("content: %c\n", md);
 
   // no type
   if (*sp == '\0') return check(op);

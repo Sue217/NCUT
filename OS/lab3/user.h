@@ -11,13 +11,15 @@ int f_create(char* file_name, char* mode, char* type);  // return file descripto
 
 int f_delete(char* file_name); // delete through file name, return status
 
-int f_open(char* file_name);
+int f_open(int fd);
 
-int f_close(char* file_name);
+int f_close(int fd);
 
 char* f_read(char* file_name);
 
 int f_write(char* file_name, char* content);
+
+void f_dir();
 
 
 

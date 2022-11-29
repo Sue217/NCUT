@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <assert.h>
 
 #include "fs.h"
 
@@ -17,7 +16,7 @@ void fs_create() {
 
   struct inode* ip = inodes;
   for (int i = 0; i < sb.ninodes; i++, ip++) {
-    ip->size = 1;
+    ip->size = 0;
     ip->inum = i;
     ip->first_block = INIT;
   }
@@ -29,14 +28,6 @@ void fs_create() {
   }
 }
 
-void fs_mount() {
-  FILE* file = fopen("data", "r");
-  fread(&sb, sizeof(struct superblock), 1, file);
-  fread(inodes, sizeof(struct inode), sb.ninodes, file);
-  fread(dbs, sizeof(struct diskblock), sb.nblocks, file);
-  fclose(file);
-}
-
 void fs_sync() {
   FILE* fp = fopen("data", "w+");
   fwrite(&sb, sizeof(struct superblock), 1, fp);
@@ -46,78 +37,14 @@ void fs_sync() {
   fclose(fp);
 }
 
-int fs_init(char filename[NAME_SIZE], short mode, short type) {
-  // find an empty inode
-  int ei = find_empty_inode();
-  assert(~ei);
-
-  // find an empty block
-  int eb = find_empty_block();
-  assert(~eb);
-
-  // claim them
-  inodes[ei].first_block = eb;
-  dbs[eb].next_block = LAST;
-
-  // connect file with inode
-  int fd = ei;
-  files[fd].ip = &inodes[fd];
-  strcpy(files[fd].name, filename);
-
-  // complete file attributes
-  switch (mode) {
-    /*
-     * read: 4
-     * write: 2
-     * execute: 1
-     */
-    case 0:
-      files[fd].readable = files[fd].writable = files[fd].executable = 0;
-      break;
-    case 1:
-      files[fd].executable = 1;
-      files[fd].readable = files[fd].writable = 0;
-      break;
-    case 2:
-      files[fd].writable = 1;
-      files[fd].readable = files[fd].executable = 0;
-      break;
-    case 3:
-      files[fd].writable = files[fd].executable = 1;
-      files[fd].readable = 0;
-      break;
-    case 4:
-      files[fd].readable = 1;
-      files[fd].writable = files[fd].executable = 0;
-      break;
-    case 5:
-      files[fd].readable = files[fd].executable = 1;
-      files[fd].writable = 0;
-      break;
-    case 6:
-      files[fd].readable = files[fd].writable = 1;
-      files[fd].executable = 0;
-      break;
-    case 7:
-      files[fd].readable = files[fd].writable = files[fd].executable = 1;
-      break;
-    default:
-      break;
-  }
-
-  files[fd].type = type;
-
-  // return the file descriptor
-  return fd;
-}
-
-void fs_alloc(int fd, int size) {
+int fs_alloc(int fd, int size) {
   // how many blocks we should have
   int total = (size + BLOCK_SIZE - 1) / BLOCK_SIZE - 1;
   int bid = inodes[fd].first_block;
 
   // extend the file if necessary...
   bid = grow(total, bid);
+  return bid;
 }
 
 void fs_free(int fd) {
@@ -125,6 +52,7 @@ void fs_free(int fd) {
 
   // contract the file if necessary...
   shrink(bid);
+  memset(dbs[bid].data, 0, sizeof(dbs[bid]));
   dbs[bid].next_block = LAST;
 }
 

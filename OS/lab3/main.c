@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 #include <assert.h>
 
 #include "fs.h"
@@ -16,43 +15,47 @@ void run() {
     char buf[BUF_SIZE];
     int len = input(buf, BUF_SIZE);
     if (len == RETURN) continue;
+    if (len == CLS) {
+      system("clear");
+      continue;
+    }
 //    printf("buf = %s\n", buf);
 
     char argv[4][MAX_SIZE];
     assert(len < BUF_SIZE);
-    int op = parse(buf, argv);
-//    printf("op = %d\n", op);
+    int ops = parse(buf, argv);
+//    printf("ops = %d\n", ops);
 
-    assert(~op);  // assert if op = -1
+//    assert(~ops);  // assert if ops = -1
 
 //    int fd = INIT;
 
-    switch (op) {
+    switch (ops) {
       case CREATE: {
 //        printf("1 %s\n2 %s\n3 %s\n", argv[1], argv[2], argv[3]);
         int fd = f_create(argv[1], argv[2], argv[3]);
         if (fd == INIT) {
-          puts("\n[Create failed!]\n");
+          puts("[Create failed!]");
         }
       }
         break;
       case DELETE: {
         int status = f_delete(argv[1]);
         if (status == FAILED) {
-          puts("\n[Delete failed!]\n");
+          puts("[Delete failed!]");
         }
       }
         break;
       case OPEN:
-        f_open(argv[1]);
+        puts("file opened");
         break;
       case CLOSE:
-        f_close(argv[1]);
+        puts("file closed");
         break;
       case READ: {
         char *content = f_read(argv[1]);
         if (!content) {
-          puts("\n[Read failed!]\n");
+          puts("[Read failed!]");
         } else {
           printf("\n%s\n\n", content);
         }
@@ -61,18 +64,19 @@ void run() {
       case WRITE: {
         int status = f_write(argv[1], argv[2]);
         if (status == FAILED) {
-          puts("\n[Write failed!]\n");
+          puts("[Write failed!]");
         }
       }
         break;
       case DIR:
+        f_dir();
         break;
       case LOGOUT:
         puts("\nBye 👋🏻\n");
         return;
       default:
-        puts("Oh no!");
-        return;
+        printf("command not found: %s\n", op);
+        break;
     }
     fs_sync();
   }
@@ -111,8 +115,12 @@ int main() {
   print();
   puts("[Done]");
 */
+
   // infinite loop if username or password didn't match
-//  while (login() == DENIED);
+  while (login() == DENIED);
+  getchar();
+  system("clear");
+  puts("Login Successfully!\n");
 
   // login info checked
   fs_create();
