@@ -1,3 +1,5 @@
+#include <string.h>
+
 #include "fs.h"
 
 int grow(int total, int bid) {
@@ -22,6 +24,7 @@ int grow(int total, int bid) {
 
 void shrink(int bid) {
 //  printf("bid = %d\n", bid);
+  strcpy(dbs[bid].data, "");
   int nn = dbs[bid].next_block;
   if (nn >= 0) {
     shrink(nn);

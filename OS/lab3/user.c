@@ -77,6 +77,7 @@ int f_create(char* file_name, char* mode, char* type) {
 int f_delete(char* file_name) {
   struct file* fp = files;
   for (int i = 0; i < sb.ninodes; i++, fp++) {
+    if (fp->ip == NULL) continue;
     if (strcmp(file_name, fp->name) == 0) {
       memset(fp->name, 0, sizeof(fp->name));
       fs_free(fp->ip->first_block);

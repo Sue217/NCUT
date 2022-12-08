@@ -52,8 +52,11 @@ void fs_free(int fd) {
 
   // contract the file if necessary...
   shrink(bid);
-  memset(dbs[bid].data, 0, sizeof(dbs[bid]));
   dbs[bid].next_block = LAST;
+  memset(files[fd].name, 0, sizeof(files[fd].name));
+  files[fd].ip->size = 0;
+  files[fd].ip->first_block = INIT;
+  files[fd].ip = NULL;
 }
 
 // TODO: rewrite the write function!
